@@ -1,0 +1,843 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: .5px;
+    color: #ffffff;
+    background: #000000;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: #dddddd;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn {
+    transition: .3s;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+
+/*******************************/
+/********** Layout CSS *********/
+/*******************************/
+.left-container,
+.right-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: gray;
+    left: 0;
+}
+
+.left-container {
+    background: #77212e;
+}
+
+.left-container::-webkit-scrollbar,
+.right-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.left-container::-webkit-scrollbar-track,
+.right-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+.left-container::-webkit-scrollbar-thumb,
+.right-container::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 7px
+}
+
+@media (max-width: 991.98px) {
+    .left-container {
+        display: none;
+    }
+}
+
+
+/*******************************/
+/********* Pricing CSS *********/
+/*******************************/
+.p-image {
+    height: 40vh;
+    text-align: center;
+    background: #77212e;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 84% 98%, 68% 100%, 51% 98%, 34% 100%, 17% 98%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 84% 98%, 68% 100%, 51% 98%, 34% 100%, 17% 98%, 0 100%, 0 0);
+}
+
+.p-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-content {
+    text-align: center;
+}
+
+.p-content .p-title {
+    margin: 30px 0 20px 0;
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+.p-content .p-title a {
+    color: #ffffff;
+}
+
+.p-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.p-content ul li {
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 200;
+    border-top: 1px solid #9B1B30;
+}
+
+.p-content ul li:last-child {
+    border-bottom: 1px solid #9B1B30;
+}
+
+.p-content .btn {
+    margin: 30px 0;
+    padding: 10px 30px;
+    font-size: 22px;
+    font-weight: 200;
+    border: 1px solid #9B1B30;
+    border-radius: 30px;
+}
+
+.p-content .btn:hover {
+    background: #9B1B30;
+}
+
+.p-content .btn span {
+    font-family: arial;
+}
+
+
+/*******************************/
+/********** Header CSS *********/
+/*******************************/
+.header {
+    position: relative;
+    padding: 90px 0;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/header-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 84% 98%, 68% 100%, 51% 98%, 34% 100%, 17% 98%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 84% 98%, 68% 100%, 51% 98%, 34% 100%, 17% 98%, 0 100%, 0 0);
+    text-align: center;
+    z-index: 1;
+}
+
+.header h2 {
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: 100;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+
+.header h2 span {
+    font-weight: 400;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0 0 30px 0;
+    list-style: none;
+}
+
+.header ul li {
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+.header .btn {
+    padding: 7px 30px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 200;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}
+
+.header .btn:hover {
+    background: #9B1B30;
+    border-color: #9B1B30;
+}
+
+
+/*******************************/
+/****** Mini Feature CSS *******/
+/*******************************/
+#feature-mini {
+    position: relative;
+    background: #9B1B30;
+    margin-top: -15px;
+}
+
+#feature-mini .col-md-4 {
+    border-right: 1px solid #77212e;
+    border-bottom: 1px solid #77212e;
+}
+
+@media (max-width: 767.98px) {
+    #feature-mini .col-md-4 {
+        border-right: none;
+    }
+    
+    #feature-mini .col-md-4:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #feature-mini .col-md-4 {
+        border-bottom: none;
+    }
+    
+    #feature-mini .col-md-4:nth-child(3n) {
+        border-right: none;
+    }
+}
+
+#feature-mini .feature-item {
+    padding: 40px 0 30px 0;
+    text-align: center;
+}
+
+#feature-mini .feature-item i {
+    color: #000000;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+#feature-mini .feature-item h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#feature-mini .feature-item p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/*******************************/
+/***** Section Header CSS ******/
+/*******************************/
+.section-header {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    left: calc(50% - 50px);
+    bottom: 0;
+    background: #000000;
+}
+
+.section-header p {
+    margin: 0;
+    color: #9B1B30;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section-header h1 {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .section-header h1 {
+        font-size: 45px;
+    }
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+#about {
+    position: relative;
+    padding: 60px 15px;
+    background: #2c3035;
+    text-align: center;
+}
+
+#about .about-text {
+    position: relative;
+    width: 100%;
+}
+
+#about .about-text p {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#about .about-text .btn {
+    padding: 5px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 200;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+}
+
+#about .about-text .btn:hover {
+    background: #9B1B30;
+    border-color: #9B1B30;
+}
+
+
+/*******************************/
+/********** Video CSS **********/
+/*******************************/
+#video {
+    position: relative;
+    background: #2c3035;
+}
+
+#video .container {
+    padding: 0;
+}
+
+#video .youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #2c3035;
+    margin: 0;
+}
+
+#video .youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+#video .youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-filter: brightness(100%);
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+#video .youtube-player img:hover {
+    -webkit-filter: brightness(90%);
+}
+
+#video .youtube-player .play {
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    position: absolute;
+    background: url("../img/play.png") no-repeat;
+    cursor: pointer;
+}
+
+#video .youtube-player .play:hover {
+    background: url("../img/play-hover.png") no-repeat;
+}
+
+@media (max-width: 575.98px) {   
+    #video .youtube-player .play {
+        height: 60px;
+        width: 60px;
+        left: 50%;
+        top: 50%;
+        margin-left: -30px;
+        margin-top: -30px;
+        background: url("../img/play-60.png") no-repeat;
+    }
+    
+    #video .youtube-player .play:hover {
+        background: url("../img/play-hover-60.png") no-repeat;
+    }
+}
+
+
+
+/*******************************/
+/********* Feature CSS *********/
+/*******************************/
+#feature {
+    position: relative;
+    padding: 60px 15px 90px 15px;
+    background: #2c3035;
+}
+
+#feature .product-feature {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+#feature .product-feature:last-child {
+    margin: 0;
+}
+
+#feature .product-icon {
+    position: relative;
+    width: 60px;
+    height: inherit;
+    float: left;
+}
+
+#feature .product-icon i {
+    color: #000000;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+#feature .product-content {
+    position: relative;
+    width: calc(100% - 60px);
+    float: left;
+}
+
+#feature .product-feature h2 {
+    font-size: 22px;
+    font-weight: 200;
+}
+
+#feature .product-feature p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#feature .product-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#feature .product-img img {
+    width: 100%;
+}
+
+@media (max-width: 767.98px) {
+    #feature .product-img img {
+        margin: 45px 0;
+    }
+}
+
+
+/*******************************/
+/******* Newsletter CSS ********/
+/*******************************/
+#newsletter {
+    position: relative;
+    padding: 45px 15px;
+    background: #9B1B30;
+}
+
+#newsletter img {
+    position: absolute;
+    height: 300px;
+    right: 30px;
+    bottom: -40px;
+    z-index: 1;
+}
+
+#newsletter h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+}
+
+#newsletter h2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: #ffffff;
+}
+
+#newsletter form {
+    position: relative;
+    font-size: 0;
+}
+
+#newsletter form input {
+    width: 250px;
+    height: 45px;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 200;
+    border: none;
+    border-radius: 0 30px 30px 0;
+}
+
+#newsletter form .btn {
+    float: left;
+    width: 100px;
+    height: 45px;
+    margin-right: 1px;
+    padding-top: 6px;
+    color: #9B1B30;
+    font-size: 18px;
+    font-weight: 200;
+    background: #ffffff;
+    border-radius: 30px 0 0 30px;
+    transition: .3s;
+}
+
+#newsletter form .btn:hover {
+    color: #ffffff;
+    background: #000000;
+}
+
+#newsletter form .btn:focus {
+    box-shadow: none;
+}
+
+@media(max-width: 767.98px) {
+    #newsletter img {
+        display: none;
+    }
+    
+    #newsletter form input {
+        width: 200px;
+    }
+}
+
+
+/*******************************/
+/*********** FAQs CSS **********/
+/*******************************/
+#faqs {
+    position: relative;
+    padding: 60px 15px;
+    background: #2c3035;
+}
+
+#faqs .card {
+    margin-bottom: 15px;
+    background: #2c3035;
+    border: none;
+    border-radius: 0;
+}
+
+#faqs .card:last-child {
+    margin-bottom: 0;
+}
+
+#faqs .card-header {
+    padding: 0;
+    border: none;
+}
+
+#faqs .card-header a {
+    display: block;
+    width: 100%;
+    padding: 8px 20px 6px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 200;
+    border: 1px solid #000000;
+    border-radius: 30px;
+}
+
+#faqs .card-header [data-toggle="collapse"]:after {
+    padding-top: 2px;
+    font-family: 'font Awesome 5 Free';
+    content: "\f067";
+    float: right;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+#faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    padding-top: 2px;
+    font-family: 'font Awesome 5 Free';
+    content: "\f068";
+    float: right;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+#faqs .card-body {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 200;
+    border: none;
+}
+
+#faqs img {
+    width: 100%;
+}
+
+@media (max-width: 767.98px) {
+    #faqs img {
+        margin-bottom: 30px;
+    }
+}
+
+
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+#testimonials {
+    position: relative;
+    padding: 60px 0;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/header-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimonials .testimonial-item {
+    position: relative;
+    margin: 0 15px;
+    text-align: center;
+}
+
+#testimonials .testimonial-img {
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+#testimonials .testimonial-item img {
+    margin: 0 auto;
+    width: 150px;
+    border: 15px solid #2c3035;
+    border-radius: 100px;
+}
+
+#testimonials .testimonial-content {
+    position: relative;
+    margin-top: -80px;
+    padding: 80px 30px 30px 30px;
+    text-align: center;
+    background: #2c3035;
+    border-radius: 30px;
+}
+
+#testimonials .testimonial-item p {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+#testimonials .testimonial-content h3 {
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#testimonials .testimonial-content h4 {
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+#testimonials .owl-nav,
+#testimonials .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#testimonials .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(256, 256, 256, .5);
+}
+
+#testimonials .owl-dot.active {
+    background: rgba(256, 256, 256, 1);
+}
+
+
+/*******************************/
+/********** Contact CSS ********/
+/*******************************/
+#contact {
+    position: relative;
+    padding: 60px 15px;
+    background: #2c3035;
+    text-align: center;
+}
+
+#contact .contact-inner h2 {
+    font-size: 45px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+#contact .contact-inner i {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 10px;
+    padding: 22px 0;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    background: #9B1B30;
+    border-radius: 80px;
+}
+
+#contact .contact-inner p {
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+#contact .social-links a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: #ffffff;
+    font-size: 22px;
+    color: #9B1B30;
+    line-height: 1;
+    padding: 12px 0;
+    margin-right: 4px;
+    text-align: center;
+    border-radius: 45px;
+    transition: 0.3s;
+}
+
+#contact .social-links a:hover {
+    background: #9B1B30;
+    color: #ffffff;
+}
+
+@media(max-width: 575.98px) {
+    #contact .contact-inner h2 {
+        font-size: 30px;
+    }
+    
+    #contact .contact-inner i {
+        width: 50px;
+        height: 50px;
+        padding: 13px 0;
+        font-size: 22px;
+    }
+    
+    #contact .contact-inner p {
+        font-size: 24px;
+    }
+}
+
+
+/*******************************/
+/********** Footer CSS *********/
+/*******************************/
+#footer {
+    position: relative;
+    padding: 30px 15px;
+    background: #9B1B30;
+}
+
+#footer .col-md-6:first-child p {
+    text-align: left;
+}
+
+#footer .col-md-6:last-child p {
+    text-align: right;
+}
+
+@media (max-width: 767.98px) {
+    #footer .col-md-6:first-child p,
+    #footer .col-md-6:last-child p {
+        text-align: center;
+    }
+}
+
+#footer p {
+    color: #dddddd;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+#footer p a {
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+#footer p a:hover {
+    color: #dddddd;
+}
